@@ -28,7 +28,7 @@ const CenterSection = () => {
   ];
 
   return (
-    <div className="w-1/2">
+    <div className="w-[45.5%]">
       <div className="bg-white">
         {newsArticles.map((article, index) => (
           <div key={index} className={`px-3  ${index==0 && 'pt-4'} rounded-lg mb-4`}>

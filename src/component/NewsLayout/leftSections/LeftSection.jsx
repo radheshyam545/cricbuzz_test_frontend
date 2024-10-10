@@ -13,7 +13,7 @@ const LeftSection = () => {
   const displayedNews = newsData.slice(0, 5); // Show only the first 5 items
 
   return (
-    <div className="w-1/6">
+    <div className="w-[21.5%]">
       <div className="bg-white p-4 border-r border-gray-200">
         <h2 className="text-xl font-bold mb-4 text-[#009270]">LATEST NEWS</h2>
         <ul>

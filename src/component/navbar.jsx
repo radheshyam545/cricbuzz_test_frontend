@@ -4,53 +4,53 @@ import { IoMdArrowDropdown } from "react-icons/io"; // Importing the dropdown ic
 
 const Navbar = () => {
   return (
-    <nav className="pt-10">
-      <div className="max-w-[1185px] mx-auto px-2 sm:px-4 lg:px-8 flex items-center justify-between bg-[#009270] py-3">
-        {/* Left Section: Logo and Links */}
-        <div className="flex items-center space-x-8">
-          <img src={"https://static.cricbuzz.com/images/cb_logo.svg"} className="h-10 w-[80px]" alt="Cricbuzz Logo" />
-          <ul className="hidden md:flex space-x-6 text-white">
-            <li className="hover:text-gray-300 cursor-pointer">Live Scores</li>
-            <li className="hover:text-gray-300 cursor-pointer">Schedule</li>
-            <li className="hover:text-gray-300 cursor-pointer">Archives</li>
-            <li className="hover:text-gray-300 cursor-pointer flex items-center relative">
-              News
-              <IoMdArrowDropdown className="ml-1 mt-[4px]" />
-            </li>
-            <li className="hover:text-gray-300 cursor-pointer flex items-center">
-              Series
-              <IoMdArrowDropdown className="ml-1 mt-[4px]" />
-            </li>
-            <li className="hover:text-gray-300 cursor-pointer flex items-center">
-              Teams
-              <IoMdArrowDropdown className="ml-1 mt-[4px]" />
-            </li>
-            <li className="hover:text-gray-300 cursor-pointer flex items-center">
-              Videos
-              <IoMdArrowDropdown className="ml-1 mt-[4px]" />
-            </li>
-            <li className="hover:text-gray-300 cursor-pointer flex items-center">
-              Rankings
-              <IoMdArrowDropdown className="ml-1 mt-[4px]" />
-            </li>
-            <li className="hover:text-gray-300 cursor-pointer flex items-center">
-              More
-              <IoMdArrowDropdown className="ml-1 mt-[4px]" />
+    <nav className="pt-2">
+      <div className="max-w-[1010px] mx-auto px-2 flex items-center justify-around bg-[#009270] py-2 h-[50px]"> {/* Fixed height */}
+        
+        {/* Logo */}
+        <img src={"https://static.cricbuzz.com/images/cb_logo.svg"} className="h-full w-auto object-contain" alt="Cricbuzz Logo" /> {/* Increased image size without increasing container height */}
 
+        {/* Links */}
+        <ul className="flex space-x-4 text-white text-sm">
+          <li className="hover:text-gray-300 cursor-pointer">Live Scores</li>
+          <li className="hover:text-gray-300 cursor-pointer">Schedule</li>
+          <li className="hover:text-gray-300 cursor-pointer">Archives</li>
+          <li className="hover:text-gray-300 cursor-pointer flex items-center relative">
+            News
+            <IoMdArrowDropdown className="ml-1 mt-[2px]" />
+          </li>
+          <li className="hover:text-gray-300 cursor-pointer flex items-center">
+            Series
+            <IoMdArrowDropdown className="ml-1 mt-[2px]" />
+          </li>
+          <li className="hover:text-gray-300 cursor-pointer flex items-center">
+            Teams
+            <IoMdArrowDropdown className="ml-1 mt-[2px]" />
+          </li>
+          <li className="hover:text-gray-300 cursor-pointer flex items-center">
+            Videos
+            <IoMdArrowDropdown className="ml-1 mt-[2px]" />
+          </li>
+          <li className="hover:text-gray-300 cursor-pointer flex items-center">
+            Rankings
+            <IoMdArrowDropdown className="ml-1 mt-[2px]" />
+          </li>
+          <li className="hover:text-gray-300 cursor-pointer flex items-center">
+            More
+            <IoMdArrowDropdown className="ml-1 mt-[2px]" />
+          </li>
+        </ul>
 
-              
-            </li>
-          </ul>
-        </div>
+        {/* Cricbuzz Plus Button */}
+        <button className="bg-white text-green-600 text-sm px-3 py-1 rounded-2xl hover:bg-gray-100">
+          Cricbuzz Plus
+        </button>
 
-        {/* Right Section: Search, Button, and Profile */}
-        <div className="flex items-center space-x-4 lg:space-x-6">
-          <button className="bg-white text-green-600 px-4 py-1 rounded-2xl hover:bg-gray-100">
-            Cricbuzz Plus
-          </button>
-          <FaSearch className="text-white cursor-pointer text-xl" />
-          <FaUserCircle className="text-white cursor-pointer text-2xl" />
-        </div>
+        {/* Search Icon */}
+        <FaSearch className="text-white cursor-pointer text-lg" />
+
+        {/* Profile Icon */}
+        <FaUserCircle className="text-white cursor-pointer text-xl" />
       </div>
     </nav>
   );

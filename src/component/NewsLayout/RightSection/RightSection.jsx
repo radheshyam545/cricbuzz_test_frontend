@@ -18,7 +18,7 @@ const RightSection = () => {
   
 
   return (
-    <div className="w-1/3">
+    <div className="w-[33%]">
         <HorizontalLine />
         <div className='bg-white p-4'>
          <Featured_Videos/>

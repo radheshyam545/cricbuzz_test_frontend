@@ -10,28 +10,34 @@ const MatchNavBar = () => {
     { title: "RSA vs IRE - RSA Won" }
   ];
 
+  // Function to truncate title if longer than 18 characters
+  const truncateTitle = (title, maxLength) => {
+    return title.length > maxLength ? `${title.substring(0, maxLength)}...` : title;
+  };
+
   return (
-    <div className="bg-gray-800 text-white max-w-[1185px] mx-auto">
-      <div className="flex items-center px-4 py-2 space-x-6 overflow-x-auto whitespace-nowrap">
+    <div className="bg-[#4a4a4a] text-white max-w-[1010px] mx-auto">
+      <div className="flex items-center space-x-1 overflow-x-auto whitespace-nowrap">
         {/* Static Matches text */}
-        <div className="font-bold text-sm text-green-400">
+        <div className="font-bold text-[12px] bg-black text-white px-3 py-2 rounded-md">
           MATCHES
         </div>
-        
+
         {/* Matches */}
-        <div className="flex-grow flex space-x-6">
+        <div className="flex-grow flex overflow-x-auto">
           {matches.map((match, index) => (
             <div
               key={index}
-              className="text-sm text-gray-300 hover:text-white cursor-pointer transition-colors duration-300"
+              className={`text-sm text-white hover:bg-gray-800 cursor-pointer transition-colors duration-300 py-2 rounded-md ${index === 0 ? "pl-[10px]" : "px-[10px]"}`} 
+              aria-label={`Match ${index + 1}`}
             >
-              {match.title}
+              {truncateTitle(match.title, 18)}
             </div>
           ))}
         </div>
 
         {/* ALL dropdown - fixed at the right end */}
-        <div className="flex-shrink-0 flex items-center space-x-1 text-sm text-gray-300 hover:text-white cursor-pointer transition-colors duration-300">
+        <div className="flex-shrink-0 flex items-center space-x-1 text-sm text-white hover:bg-gray-950 cursor-pointer transition-colors duration-300 px-4 py-2">
           <span>ALL</span>
           <IoMdArrowDropdown />
         </div>
